@@ -1,0 +1,91 @@
+<?php
+class straipsniai {
+var $antraste;
+var $pavadinimas;
+var $paveiksliukas;
+var $tekstas;
+
+
+
+}
+class straipsnis extends straipsniai {
+	var $type;
+	var $stores;
+
+	function build($type, $stores) {
+    
+    }
+}
+
+
+$paveiksliukas='https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940';
+
+
+/*$file = 'newpage.html';
+// Open the file to get existing content
+$current = file_get_contents($file);
+// Append a new person to the file
+$current .= "<!doctype html><html>
+<head><meta charset='utf-8'>
+<title>new file</title>
+</head><body><h3>New HTML file</h3>
+
+</body></html>
+";
+file_put_contents($file, $current);*/
+
+$filename = 'test.html';
+ header("Cache-Control: public");
+ header("Content-Description: File Transfer");
+ header("Content-Disposition: attachment; filename=$filename");
+ header("Content-Type: application/octet-stream; ");
+ header("Content-Transfer-Encoding: binary");
+
+
+?>
+<?php
+ class Books { 
+  
+    /* Member variables */
+    var $price; 
+    var $title; 
+    /* Member functions */
+    function setPrice($par){ 
+       $this->price = $par; 
+    } 
+      
+    function getPrice(){ 
+       echo $this->price."<br>"; 
+    } 
+      
+    function setTitle($par){ 
+       $this->title = $par; 
+    } 
+      
+    function getTitle(){ 
+       echo $this->title."<br>" ; 
+    } 
+ } 
+ function setTekstas($par){ 
+    $this->tekstas = $par; 
+ } 
+   
+ function getTekstas(){ 
+    echo $this->tekstas."<br>"; 
+ } 
+
+ /* Creating New object using "new" operator */
+ $maths = new Books;
+$ss = new Books;
+
+ /* Setting title and prices for the object */
+ $maths->setTitle( "VESTUVIØ FËJOS. JULIJA: kai meilë sugráþta." ); 
+ $maths->setPrice( 6 ); 
+ $ss->setTitle( "EKSTAZË" ); 
+ $maths->setPrice( 11,88 ); 
+ $maths->setTitle( "MANO ÐIRDIS PLAKA TARP ÞEMËS IR DANGAUS" ); 
+ $maths->setPrice( 6,59 ); 
+ /* Calling Member Functions */  
+ $maths->getTitle(); 
+ $maths->getPrice(); 
+?> 
